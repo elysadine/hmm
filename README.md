@@ -20,15 +20,15 @@ This repository provides the complete materials to reproduce the Hidden Markov M
 - Estimated time to mastery: 22.4 hours from C2 vs. 5.6 hours from C3
 
 ## Repository Structure
-hmm/
-├── README.md # This file
-├── LICENSE # MIT License
-├── requirements.txt # Python dependencies
-├── hmm.xlsx # Main dataset (845 students)
+```hmm/
+├── README.md               # This file
+├── LICENSE                 # MIT License
+├── requirements.txt        # Python dependencies
+├── hmm.xlsx            # Main dataset (845 students)
 ├── hmmsubstraction.xlsx # Subtraction-specific data
-├── codehmm.py # Main HMM estimation script
-├── codehmm2.py # Additional analysis scripts
-
+├── codehmm.py          # Main HMM estimation script
+├── codehmm2.py         # Additional analysis scripts
+```
 
 ## Data Description
 
@@ -65,6 +65,49 @@ Subtraction-specific dataset with procedural error coding:
   - `C2`: Stabilized obstacle
   - `C3`: Partial understanding
   - `C4`: Expert mastery
+ 
+## Results
+
+The main results are summarized below:
+
+| State | Self-transition | 95% CI | Emission (dominant) |
+|-------|-----------------|--------|---------------------|
+| C0 (Naive) | 0.45 | [0.38, 0.52] | o4 (0.20) |
+| C1 (Mechanical) | 0.60 | [0.54, 0.66] | o2 (0.30) |
+| C2 (Obstacle) | 0.82 | [0.77, 0.87] | o2 (0.88) |
+| C3 (Partial) | 0.55 | [0.48, 0.62] | o3 (0.50) |
+| C4 (Expert) | 1.00 | [1.00, 1.00] | o1 (0.98) |
+
+### Expected Time to Mastery
+
+| Starting State | Sessions | Hours |
+|----------------|----------|-------|
+| C0 (Naive) | 15.4 | 30.8 |
+| C2 (Obstacle) | 11.2 | 22.4 |
+| C3 (Partial) | 2.8 | 5.6 |
+
+## Reproducibility
+
+To fully reproduce the analysis:
+
+1. Clone this repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the analysis: `python code/codehmm.py`
+4. Generate figures: `python code/codehmm.py --figures`
+
+All results should match those reported in the paper.
+
+## Citation
+
+If you use this code or data in your research, please cite:
+bibtex
+@article{razafindrafara2026modeling,
+  title={Modeling the evolution of subtraction schemes in low-resource contexts: A hidden Markov analysis of persistent errors and learning trajectories},
+  author={Razafindrafara, E.M.A. and Razafinirina, M.A. and Nguala, J.B. and Raherinirina, A.},
+  journal={International Journal of Educational Research},
+  year={2026},
+  note={JIJER-D-26-03234}
+}
 
 ## Requirements
 
