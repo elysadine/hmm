@@ -24,8 +24,8 @@ This repository provides the complete materials to reproduce the Hidden Markov M
 ├── README.md               # This file
 ├── LICENSE                 # MIT License
 ├── requirements.txt        # Python dependencies
-├── hmm.xlsx            # Main dataset (845 students)
-├── hmmsubstraction.xlsx # Subtraction-specific data
+├── hmm.xlsx            # Quantitative dataset (845 students)
+├── hmmsubstraction.xlsx # Qualitative dataset
 ├── codehmm.py          # Main HMM estimation script
 ├── codehmm2.py         # Additional analysis scripts
 ```
